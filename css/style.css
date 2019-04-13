@@ -1,0 +1,194 @@
+/* CSS For Hiding 'Skip to Main' link unless it receives keyboard focus adapted from https://webaim.org/techniques/css/invisiblecontent/ */
+a.skip-main{
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+a.skip-main:focus{
+  position:static;
+  width:auto;
+  height:auto;
+}
+nav{
+  font-size: 1.5em;
+  padding: 1em 0em;
+  /* text-align: left; */
+}
+nav ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+nav ul li{
+  background-color: rgba(255, 255, 255, 0.5);
+  list-style-type: none;
+  margin: 1em;
+}
+nav a.current{
+  font-style: italic;
+  text-transform: uppercase;
+}
+figure{
+  display: inline-block;
+  width: 92%;
+  text-align: center;
+}
+figure img {
+  /* text-align: center; */
+  width: 50vw;
+}
+body{
+  font-family: 'Montserrat';
+}
+header{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+header h1{
+  /* line-height: 200%; */
+  font-size: 4em;
+}
+main > h2{
+  font-size: 125%;
+  margin: .75em;
+}
+main.longtext p{
+  line-height: 2em;
+  padding-bottom:1em;
+  padding-left: .75em;
+}
+ul.events{
+  list-style-type: none;
+  display: inline-block;
+  line-height: 1.5em;
+}
+ul.events > li{
+
+  margin: .75em;
+  padding-bottom: 1em;
+  /* width: 100vw; */
+}
+ul.events > li > img{
+  display: block;
+  /* margin: 0 auto; */
+  margin-bottom: .5em;
+  /* width: 40vw; */
+  height: 30vh;
+}
+footer{
+  display: inline-block;
+  padding: 2em .75em;
+  width: 95%;
+  text-align: center;
+}
+
+@media only screen and (min-width: 0px) {
+  section.gallery{
+    margin: 0% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  section.gallery section img{
+    max-width: 100%;
+    /* max-height: 40vh; */
+    /* object-fit: contain; */
+    padding-top: 2em;
+  }
+  section.gallery section ul{
+    list-style-type: none;
+    text-align: center;
+    max-width: 100%;
+    padding-bottom: 2em;
+  }
+  figure{
+    margin: 5% 2.5%;
+  }
+  img.logo{
+    margin: 2em;
+    height: 20vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section.gallery{
+    margin-left: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* resource for grid trick: https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
+    /* grid-template-columns: repeat( auto-fill, minmax(min-content, 30vw) ); */
+  }
+  section.gallery section {
+    /* display: inline-block; */
+    /* width: 30vw; */
+    padding: 1em;
+    place-self: center;
+  }
+  section.gallery section img{
+    max-width: 100%;
+    max-height: auto;
+    object-fit: contain;
+  }
+  section.gallery section ul{
+    list-style-type: none;
+    text-align: center;
+    max-width: 100%;
+  }
+  figure{
+    margin: 2em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section.gallery{
+    margin-left: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* resource for grid trick: https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
+    /* grid-template-columns: repeat( auto-fill, minmax(min-content, 30vw) ); */
+  }
+  img.logo{
+    display: none;
+  }
+  header{
+    /* Octopus image sourced via google image search: https://www.pinterest.co.uk/pin/434738170262088593/ */
+    background-color: #ffffff;
+    background-image: url("../images/background_octopus_test.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: contain;
+    margin: 1em 0em;
+  }
+  ul.events{
+    margin-left: 2em;
+  }
+}
+@media only print {
+  figure{
+    display: none;
+  }
+  header nav ul{
+    display: none;
+  }
+  img.logo {
+    display: none;
+  }
+  ul.events > li > img{
+    display: none;
+  }
+  section.gallery section img{
+    max-width: 50vw;
+    /* max-height: 40vh; */
+    /* object-fit: contain; */
+    padding-top: 2em;
+    display: block;
+    page-break-inside: avoid !important;
+  }
+  body::after{
+     content:url("http://chart.googleapis.com/chart?cht=qr&chs=200x200&choe=UTF-8&chld=H&chl=mwhanger.github.io");
+     }
+}
