@@ -101,6 +101,12 @@ div.broadcastbar {
 a.hide-broadcast-target{
   text-decoration: none;
   color: white;
+  border-radius: 50%;
+  transition: all ease .3s;
+}
+div.hide-broadcast a.hide-broadcast-target:hover{
+  /* background: rgba(255,255,255,0.7); */
+  color: #000;
 }
 @media only screen and (min-width: 0px) {
   section.gallery{
