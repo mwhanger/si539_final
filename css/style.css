@@ -86,7 +86,22 @@ footer{
   width: 95%;
   text-align: center;
 }
-
+div.broadcastcontent {
+  margin: 0 auto;
+}
+div.broadcastbar {
+  padding: .5em;
+  color: white;
+  display: flex;
+  text-align: center;
+  background: #444;
+  position: relative;
+  font-weight: bold;
+}
+a.hide-broadcast-target{
+  text-decoration: none;
+  color: white;
+}
 @media only screen and (min-width: 0px) {
   section.gallery{
     margin: 0% 5%;
