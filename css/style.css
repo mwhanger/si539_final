@@ -164,6 +164,10 @@ div.hide-broadcast a.hide-broadcast-target:hover{
   figure{
     margin: 2em;
   }
+  /* Flip Card CSS Properties
+  Resources I used to get CSS Flip Card Working
+  https://www.w3schools.com/howto/howto_css_flip_card.asp
+  https://nicolaskadis.info/projects/pure-css-flip-cards-using-bootstrap-4-and-css-grid-no-js (and a codepen from the author) */
   .card-container {
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
