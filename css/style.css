@@ -164,6 +164,35 @@ div.hide-broadcast a.hide-broadcast-target:hover{
   figure{
     margin: 2em;
   }
+  .card-container {
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  .card-flip, .card-container {
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+  }
+  .card-flip div {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+  .flip-card-back {
+    grid-area: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(-180deg);
+  }
+  .flip-card-front {
+    grid-area: none;
+  }
+.card-container:hover .card-flip {
+    transform: rotateY(180deg);
+  }
+  .card-flip {
+    display: grid;
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+  }
 }
 @media only screen and (min-width: 1024px) {
   section.gallery{
