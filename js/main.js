@@ -10,4 +10,18 @@ document.addEventListener('DOMContentLoaded', function(e) {
       })
     })
 
+    var icon = document.querySelector("#icon")
+    icon.addEventListener('click', function(e) {
+    console.log('Hamburger icon clicked');
+    // var x = document.getElementById("myTopnav");
+    var x = document.getElementsByTagName("nav")[0];
+    console.log(x);
+    // if (x.className === "topnav") {
+    if (x.className === "") {
+      x.className += "responsive";
+    } else {
+      x.className = "";
+    }
+  })
+
 });
