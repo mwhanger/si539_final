@@ -9,6 +9,7 @@
       <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/lightbox.css">
       <script type="text/javascript" src='js/main.js'></script>
       <!-- title need to change for each page -->
       <title >Predictive Animalytics</title>
@@ -44,14 +45,14 @@
       <h2>Recent Event Predictions</h2>
       <ul class="events">
       <li>
-      <img src="images/phil-gday-2019.jpg" alt="Punxsutawney Phil with handler, 2019.">
+      <img src="images/phil-gday-2019.jpg" alt="Punxsutawney Phil with handler, 2019." onclick="openModal();currentSlide(1)" class="hover-shadow">
       <!-- phil-gday-2019.jpg - sourced from https://www.cnn.com/travel/article/groundhog-day-punxsutawney-phil-prediction/index.html -->
       <!-- source for Pierre C. Shadeaux news - https://www.iberianet.com/breaking_news/shadeaux-sees-his-shadow-on-cajun-groundhog-day/article_d3909860-2704-11e9-9150-bfc6bd1e9edc.html -->
       <p><strong>February 2, 2019</strong> - Punxsutawney Phil fails to see his shadow, signaling an early spring. Cajun groundhog Pierre C. Shadeaux disagrees.</p>
       </li>
 
       <li>
-      <img src="images/achilles-predict.jpeg" alt="Achilles the Cat at a desk during a news conference.">
+      <img src="images/achilles-predict.jpeg" alt="Achilles the Cat at a desk during a news conference." onclick="openModal();currentSlide(1)" class="hover-shadow">
       <!-- image - achilles-predict.jpeg - sourced from https://www.telegraph.co.uk/news/2018/06/14/russias-psychic-cat-achilles-predicts-winner-opening-world-cup/ -->
       <p><strong>June 15, 2018</strong> - Achilles the Cat successfully predicts the winner in the opening match of the 2018 World Cup.</p>
       </li>
@@ -72,5 +73,41 @@
     <footer>
       &copy; Matt Hanger, 2019
     </footer>
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlides">
+            <div class="numbertext">1 / 2</div>
+            <img src="images/phil-gday-2019.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 2</div>
+            <img src="images/achilles-predict.jpeg" style="width:100%">
+          </div>
+
+          <!-- Next/previous controls -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <!-- Caption text -->
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <!-- Thumbnail image controls -->
+          <!-- <div class="column">
+            <img class="demo" src="images/phil-gday-2019.jpg" onclick="currentSlide(1)" alt="Nature">
+          </div>
+
+          <div class="column">
+            <img class="demo" src="images/achilles-predict.jpeg" onclick="currentSlide(2)" alt="Snow">
+          </div> -->
+
+        </div>
+      </div>
+      <script src="js/lightbox.js">
+      </script>
   </body>
 </html>

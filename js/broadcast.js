@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     closeBroadcast.addEventListener('click', function(e) {
     if(cookie != "true") {
       broadcast.style.display = "none";
-      createCookie('hide_broadcast_bar', "true", 7);
+      createCookie('hide_broadcast_bar', "true", 30);
     }
     e.preventDefault();
   });
