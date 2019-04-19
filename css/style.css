@@ -260,11 +260,16 @@ div.hide-broadcast a.hide-broadcast-target:hover{
      }
 }
 @media screen and (max-width: 768px) {
-  nav ul li:not(:first-child) {display: none;}
+  /* nav ul li:not(:first-child) {display: none;} */
+  nav ul li a:not(.current) {display: none;}
   nav ul{
     justify-content: space-between;
   }
-  nav #icon {
+  nav ul li a.current{
+    position: absolute;
+    left: 1em;
+  }
+  nav ul li a#icon {
     flex-direction: row;
     float: right;
     display: block;
@@ -276,9 +281,9 @@ div.hide-broadcast a.hide-broadcast-target:hover{
 }
 @media screen and (max-width: 768px) {
   nav.responsive {position: relative;}
-  nav.responsive #icon {
+  nav.responsive ul li a#icon {
     position: absolute;
-    right: 0;
+    right: 1em;
     top: 0;
   }
   nav.responsive ul{
@@ -287,9 +292,13 @@ div.hide-broadcast a.hide-broadcast-target:hover{
     flex-wrap: nowrap;
     justify-content: left;
   }
-  nav.responsive ul li {
+  nav.responsive ul li a{
     float: none;
     display: block;
     text-align: left;
+  }
+  nav.responsive ul li a.current{
+    position: relative;
+    left: 0;
   }
 }
