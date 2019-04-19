@@ -32,6 +32,9 @@ nav a.current{
   font-style: italic;
   text-transform: uppercase;
 }
+nav a{
+  color: #000;
+}
 nav a:visited{
   color: #4e1774;
 }
